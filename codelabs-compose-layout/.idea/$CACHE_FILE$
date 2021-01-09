@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Desktop/OmiseAndroidTest" value="PREVIEW" />
+        <entry key="$USER_HOME$/dev/codelab/android-paging" value="PREVIEW" />
+        <entry key="$USER_HOME$/dev/github/ArchitectureComponentsDemo" value="PREVIEW" />
+        <entry key="$USER_HOME$/dev/github/android-BasicAndroidKeyStore" value="PREVIEW" />
+        <entry key="$USER_HOME$/dev/github/android-ConfirmCredential" value="PREVIEW" />
+        <entry key="$USER_HOME$/dev/github/android-architecture-components/PagingWithNetworkSample" value="PREVIEW" />
+        <entry key="$USER_HOME$/dev/omise/tamboon-mobile" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+</project>
