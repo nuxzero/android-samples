@@ -1,0 +1,61 @@
+<resources>
+
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+
+		<item name="alertDialogTheme">@style/AlertDialog</item>
+	</style>
+
+	<style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+		<!-- TODO: Figure out Dialog title -->
+		<item name="android:windowTitleStyle">@style/AlertDialog.Title</item>
+		<!--<item name="android:textAppearance">@style/AlertDialog.Title</item>-->
+		<!--<item name="android:textAppearanceSmall">@style/AlertDialog.Title</item>-->
+
+		<!-- Dialog message -->
+		<item name="android:textAppearanceSmall">@style/AlertDialog.Message</item>
+		<!--<item name="android:textAppearanceMedium">@style/AlertDialog.Message</item>-->
+
+		<!-- Dialog background -->
+		<item name="android:windowBackground">@drawable/dialog_background</item>
+
+		<!-- Dialog buttons -->
+		<item name="buttonBarPositiveButtonStyle">@style/AlertDialog.Button</item>
+		<item name="buttonBarNegativeButtonStyle">@style/AlertDialog.Button</item>
+		<item name="buttonBarNeutralButtonStyle">@style/AlertDialog.Button</item>
+	</style>
+
+	<style name="AlertDialog.Title" >
+		<item name="android:textAppearance">@style/AlertDialog.Title.TextAppearance</item>
+	</style>
+
+	<style name="AlertDialog.Title.TextAppearance">
+		<item name="android:fontFamily">@font/notosans_black</item>
+		<item name="android:textColor">@color/colorPrimary</item>
+		<item name="android:textSize">24sp</item>
+	</style>
+
+	<style name="AlertDialog.Message">
+		<!--<item name="android:textAppearance">@style/AlertDialog.Message.TextAppearance</item>-->
+		<item name="fontFamily">@font/notosans_bold</item>
+		<item name="android:textSize">42sp</item>
+	</style>
+
+	<style name="AlertDialog.Message.TextAppearance">
+		<item name="fontFamily">@font/notosans_medium</item>
+		<!--<item name="android:textSize">32sp</item>-->
+		<!--<item name="android:textColor">@color/colorPrimary</item>-->
+	</style>
+
+	<style name="AlertDialog.Button" parent="@style/Widget.AppCompat.Button.Borderless">
+		<item name="fontFamily">@font/notosans_black</item>
+		<item name="colorControlHighlight">@color/colorAccent</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:textSize">17sp</item>
+		<item name="android:textColor">@color/colorPrimaryDark</item>
+	</style>
+</resources>
