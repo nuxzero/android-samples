@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button" parent="TextAppearance.Button">
+        <item name="android:paddingLeft">@dimen/button_internal_padding</item>
+        <item name="android:paddingRight">@dimen/button_internal_padding</item>
+        <item name="android:layout_margin">@dimen/button_external_margin</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+    </style>
+
+    <!-- Flat button -->
+    <style name="Button.Flat" parent="Button">
+        <item name="android:minWidth">@dimen/button_flat_min_width</item>
+        <item name="android:textColor">@color/light_flat_text_default</item>
+        <item name="android:background">@drawable/bg_flat_light_button</item>
+    </style>
+
+    <style name="Button.Flat.Light" parent="Button.Flat">
+
+    </style>
+
+    <style name="Button.Flat.Light.Primary" parent="Button.Flat">
+        <item name="android:textColor">@color/light_flat_text_primary</item>
+    </style>
+
+    <style name="Button.Flat.Dark" parent="Button.Flat">
+        <item name="android:textColor">@color/dark_flat_text_default</item>
+        <item name="android:background">@drawable/bg_flat_dark_button</item>
+    </style>
+
+    <!-- Raised button -->
+    <style name="Button.Raised" parent="Button">
+        <item name="android:minWidth">@dimen/button_raised_min_width</item>
+        <item name="android:background">@drawable/bg_raised_button</item>
+        <item name="android:textColor">@color/raised_text_white</item>
+    </style>
+
+    <style name="Button.Raised.Default" parent="Button.Raised">
+        <item name="android:textColor">@color/raised_text_black</item>
+        <item name="android:background">@drawable/bg_raised_white_button</item>
+    </style>
+
+</resources>

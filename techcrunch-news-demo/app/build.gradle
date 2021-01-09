@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "me.cafecode.android.techcrunchnews"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$rootProject.ext.androidSupportVersion"
+    compile "com.android.support:support-v4:$rootProject.ext.androidSupportVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.androidSupportVersion"
+    compile "com.android.support:design:$rootProject.ext.androidSupportVersion"
+    compile "com.android.support.constraint:constraint-layout:$rootProject.ext.androidSupportConstraintLayoutVersion"
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+    testCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
+    testCompile "com.squareup.okhttp3:mockwebserver:$rootProject.ext.mockWebserverVersion"
+    testCompile "org.hamcrest:hamcrest-library:$rootProject.ext.hamcrestVersion"
+
+    androidTestCompile "junit:junit:$rootProject.ext.junitVersion"
+    androidTestCompile "com.android.support.test:runner:$rootProject.ext.runnerVersion"
+    androidTestCompile "com.android.support.test:rules:$rootProject.ext.rulesVersion"
+    androidTestCompile "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion"
+    androidTestCompile "com.android.support.test.espresso:espresso-contrib:$rootProject.ext.espressoVersion"
+    androidTestCompile "org.hamcrest:hamcrest-library:$rootProject.ext.hamcrestVersion"
+    androidTestCompile "com.squareup.okhttp3:mockwebserver:$rootProject.ext.mockWebserverVersion"
+
+    // Solve conflict test APK
+    androidTestCompile "com.android.support:appcompat-v7:$rootProject.androidSupportVersion"
+    androidTestCompile "com.android.support:support-v4:$rootProject.ext.androidSupportVersion"
+    androidTestCompile "com.android.support:recyclerview-v7:$rootProject.androidSupportVersion"
+    androidTestCompile "com.android.support:design:$rootProject.ext.androidSupportVersion"
+    androidTestCompile "com.android.support:support-annotations:$rootProject.ext.androidSupportVersion"
+
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text style -->
+    <!--<style name="RegularText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="ItalicText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="BoldText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="BoldItalicText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+    <style name="LightText">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="LightItalicText">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="ThinText">
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="ThinItalicText">
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="CondensedRegularText">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="CondensedItalicText">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="CondensedBoldText">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CondensedBoldItalicText">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+    <style name="MediumText">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Display4Text" parent="LightText">
+        <item name="android:textSize">@dimen/abc_text_size_display_4_material</item>
+    </style>
+    <style name="Display3Text" parent="RegularText">
+        <item name="android:textSize">@dimen/abc_text_size_display_3_material</item>
+    </style>
+    <style name="Display2Text" parent="RegularText">
+        <item name="android:textSize">@dimen/abc_text_size_display_2_material</item>
+    </style>
+    <style name="Display1Text" parent="RegularText">
+        <item name="android:textSize">@dimen/abc_text_size_display_1_material</item>
+    </style>
+    <style name="HeadlineText" parent="RegularText">
+        <item name="android:textSize">@dimen/abc_text_size_headline_material</item>
+    </style>
+    <style name="TitleText" parent="MediumText">
+        <item name="android:textSize">@dimen/abc_text_size_title_material</item>
+    </style>
+    <style name="SubheadText" parent="RegularText">
+        <item name="android:textSize">@dimen/abc_text_size_subhead_material</item>
+    </style>
+    <style name="Body2Text" parent="MediumText">
+        <item name="android:textSize">@dimen/abc_text_size_body_2_material</item>
+    </style>
+    <style name="Body1Text" parent="RegularText">
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+    </style>
+    <style name="CaptionText" parent="RegularText">
+        <item name="android:textSize">@dimen/abc_text_size_caption_material</item>
+    </style>
+    <style name="ButtonText" parent="MediumText">
+        <item name="android:textSize">@dimen/abc_text_size_button_material</item>
+        <item name="android:textAllCaps">true</item>
+    </style>-->
+
+    <style name="TextAppearance.Display4" parent="TextAppearance.AppCompat.Display4"/>
+    <style name="TextAppearance.Display3" parent="TextAppearance.AppCompat.Display3"/>
+    <style name="TextAppearance.Display2" parent="TextAppearance.AppCompat.Display2"/>
+    <style name="TextAppearance.Display1" parent="TextAppearance.AppCompat.Display1"/>
+    <style name="TextAppearance.Headline" parent="TextAppearance.AppCompat.Headline"/>
+    <style name="TextAppearance.Title" parent="TextAppearance.AppCompat.Title"/>
+    <style name="TextAppearance.Subhead" parent="TextAppearance.AppCompat.Subhead"/>
+    <style name="TextAppearance.Body2" parent="TextAppearance.AppCompat.Body2"/>
+    <style name="TextAppearance.Body1" parent="TextAppearance.AppCompat.Body1"/>
+    <style name="TextAppearance.Caption" parent="TextAppearance.AppCompat.Caption"/>
+    <style name="TextAppearance.Button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>

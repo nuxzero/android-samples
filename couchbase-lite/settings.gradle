@@ -1,0 +1,1 @@
+include ':app', ':couchbase_1_4', ':shared_resources', ':couchbase_2_0', ':couchbase_2_0', ':mylibrary'
