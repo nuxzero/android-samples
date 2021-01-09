@@ -1,0 +1,102 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+publishing {
+    publications {
+        mavenAar(MavenPublication) {
+            groupId 'me.cafecode'
+            artifactId 'sample_lib'
+            version '1.0.0' // Snapshot version required `-SNAPSHOT` as suffix
+            artifact sourcesJar
+            artifact "$buildDir/outputs/aar/sample_lib-release.aar"
+            pom {
+                packaging = 'aar'
+                name = "Smple Lib"
+                description = "This is a sample lib for publishing open source project to nexus."
+                url = "https://github.com/nuxzero/sample-android-publish-lib"
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'nux'
+                        name = 'NATTHAWUT HAMETHULIN'
+                        email = 'natthawut1991@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/nuxzero/sample-android-publish-lib.git'
+                    developerConnection = 'scm:git:git://github.com/nuxzero/sample-android-publish-lib.git'
+                    url = 'https://github.com/nuxzero/sample-android-publish-lib'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username = ossrhUsername
+                password = ossrhPassword
+            }
+
+            // Upload to https://oss.sonatype.org
+            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
+
+            // Upload to local. Note `credentials` not support local file.
+            // def releasesRepoUrl = "$buildDir/releases"
+            // def snapshotsRepoUrl = "$buildDir/snapshots"
+
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenAar
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
