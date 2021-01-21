@@ -18,6 +18,9 @@ class BlurWorker(context: Context, workerParams: WorkerParameters) : Worker(cont
         val appContext = applicationContext
         val resourceUri = inputData.getString(KEY_IMAGE_URI)
         makeStatusNotification("Blurring image", applicationContext)
+        // ADD THIS TO SLOW DOWN THE WORKER
+        sleep()
+        // ^^^^
         return try {
             if (TextUtils.isEmpty(resourceUri)) {
                 Timber.e("Invalid input uri")
