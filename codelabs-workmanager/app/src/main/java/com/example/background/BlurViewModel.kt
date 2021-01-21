@@ -20,6 +20,7 @@ import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.work.Constraints
 import androidx.work.Data
 import androidx.work.OneTimeWorkRequest
 import androidx.work.OneTimeWorkRequestBuilder
@@ -64,10 +65,15 @@ class BlurViewModel(application: Application) : AndroidViewModel(application) {
             continuation = continuation.then(blurBuilder.build())
         }
 
+        val constraints = Constraints.Builder()
+                .setRequiresCharging(true)
+                .build()
+
         // Add WorkRequest to save the image to the filesystem
-    val save = OneTimeWorkRequest.Builder(SaveImageToFileWorker::class.java)
-            .addTag(TAG_OUTPUT)
-            .build()
+        val save = OneTimeWorkRequest.Builder(SaveImageToFileWorker::class.java)
+                .setConstraints(constraints)
+                .addTag(TAG_OUTPUT)
+                .build()
         continuation = continuation.then(save)
 
         // Actually start the work
@@ -91,6 +97,10 @@ class BlurViewModel(application: Application) : AndroidViewModel(application) {
 
     internal fun setOutputUri(outputImageUri: String?) {
         outputUri = uriOrNull(outputImageUri)
+    }
+
+    internal fun cancelWork() {
+        workManager.cancelUniqueWork(IMAGE_MANIPULATION_WORK_NAME)
     }
 
     private fun createInputDataForUri(): Data {
