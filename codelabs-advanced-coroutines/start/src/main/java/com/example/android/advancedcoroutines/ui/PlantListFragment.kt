@@ -88,7 +88,7 @@ class PlantListFragment : Fragment() {
 //        viewModel.plants.observe(viewLifecycleOwner) { plants ->
 //            adapter.submitList(plants)
 //        }
-        
+
         viewModel.plantsUsingFlow.observe(viewLifecycleOwner) { plants ->
             adapter.submitList(plants)
         }
