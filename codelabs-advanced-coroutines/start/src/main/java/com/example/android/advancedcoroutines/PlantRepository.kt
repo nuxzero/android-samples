@@ -85,7 +85,7 @@ class PlantRepository private constructor(
             }
     }
 
-    fun getPlantWithGrowZoneFlow(growZoneNumber: GrowZone): Flow<List<Plant>> {
+    fun getPlantsWithGrowZoneFlow(growZoneNumber: GrowZone): Flow<List<Plant>> {
         return plantDao.getPlantsWithGrowZoneNumberFlow(growZoneNumber.number)
     }
 
