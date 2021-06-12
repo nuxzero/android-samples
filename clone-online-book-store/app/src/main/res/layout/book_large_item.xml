@@ -10,8 +10,8 @@
             type="com.example.app.data.models.Book" />
     </data>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="120dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?android:attr/selectableItemBackground"
         android:orientation="vertical"
@@ -19,34 +19,44 @@
 
         <ImageView
             android:id="@+id/thumb_image"
-            android:layout_width="@dimen/thumb_image_size"
-            android:layout_height="@dimen/thumb_image_size"
+            android:layout_width="@dimen/book_large_width"
+            android:layout_height="@dimen/book_large_height"
             android:layout_marginStart="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
+            android:scaleType="centerCrop"
             android:srcDrawable="@{book.image}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/title_text"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginEnd="@dimen/margin_medium"
             android:ellipsize="end"
             android:maxLines="1"
             android:text="@{book.title}"
             android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintEnd_toEndOf="@id/thumb_image"
+            app:layout_constraintStart_toStartOf="@id/thumb_image"
+            app:layout_constraintTop_toBottomOf="@id/thumb_image"
             tools:text="Ipsum, iaculis sem congue non facilisi." />
 
         <TextView
             android:id="@+id/author_text"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium"
             android:text="@{book.author}"
             android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintEnd_toEndOf="@id/thumb_image"
+            app:layout_constraintStart_toStartOf="@id/thumb_image"
+            app:layout_constraintTop_toBottomOf="@id/title_text"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:text="John Doe" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

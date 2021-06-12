@@ -5,4 +5,9 @@
     <dimen name="margin_small">8dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
     <dimen name="margin_large">24dp</dimen>
+
+    <dimen name="book_large_width">131dp</dimen>
+    <dimen name="book_large_height">192dp</dimen>
+    <dimen name="book_width">72dp</dimen>
+    <dimen name="book_height">105dp</dimen>
 </resources>

@@ -13,21 +13,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:transitionName="@{@string/book_item_transition_name(book.id)}"
-        android:background="?android:attr/selectableItemBackground">
+        android:background="?android:attr/selectableItemBackground"
+        android:transitionName="@{@string/book_item_transition_name(book.id)}">
 
         <ImageView
             android:id="@+id/thumb_image"
-            android:layout_width="@dimen/thumb_image_size"
-            android:layout_height="@dimen/thumb_image_size"
+            android:layout_width="@dimen/book_width"
+            android:layout_height="@dimen/book_height"
             android:layout_marginStart="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
+            android:scaleType="centerCrop"
             android:srcDrawable="@{book.image}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@drawable/book_4" />
 
         <TextView
             android:id="@+id/title_text"
@@ -37,10 +38,11 @@
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
             android:ellipsize="end"
-            android:maxLines="2"
+            android:maxLines="1"
             android:text="@{book.title}"
             android:textAppearance="?attr/textAppearanceHeadline6"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bookmark_image"
             app:layout_constraintStart_toEndOf="@id/thumb_image"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Ipsum, iaculis sem congue non facilisi." />
@@ -49,22 +51,33 @@
             android:id="@+id/author_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
             android:text="@{book.author}"
             android:textAppearance="?attr/textAppearanceBody2"
-            app:layout_constraintStart_toEndOf="@id/thumb_image"
+            app:layout_constraintStart_toStartOf="@id/title_text"
             app:layout_constraintTop_toBottomOf="@id/title_text"
             tools:text="John Doe" />
 
-        <TextView
-            android:id="@+id/publish_date_text"
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="@id/title_text"
+            app:layout_constraintTop_toBottomOf="@id/author_text"
+            tools:rating="4" />
+
+        <ImageView
+            android:id="@+id/bookmark_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:dateText="@{book.createdAt}"
-            android:textAppearance="?attr/textAppearanceOverline"
-            app:layout_constraintBaseline_toBaselineOf="@id/author_text"
+            android:src="@drawable/ic_bookmark"
+            app:layout_constraintBottom_toBottomOf="@id/title_text"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Jan 1, 2021" />
+            app:layout_constraintStart_toEndOf="@id/title_text"
+            app:layout_constraintTop_toTopOf="@id/title_text" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
