@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="book"
+            type="com.example.app.data.models.Book" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:transitionName="@{@string/book_item_transition_name(book.id)}"
+        android:orientation="vertical"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/thumb_image"
+            android:layout_width="@dimen/thumb_image_size"
+            android:layout_height="@dimen/thumb_image_size"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:srcUrl="@{book.image}"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{book.title}"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            tools:text="Ipsum, iaculis sem congue non facilisi." />
+
+        <TextView
+            android:id="@+id/author_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@{book.author}"
+            android:textAppearance="?attr/textAppearanceBody2"
+            tools:text="John Doe" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

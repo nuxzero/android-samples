@@ -1,4 +1,4 @@
-package com.example.app.ui.notes
+package com.example.app.ui.home
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.fragment.app.testing.launchFragmentInContainer
@@ -37,7 +37,7 @@ class BookListFragmentTest {
     val instantExecutorRule = InstantTaskExecutorRule()
     private lateinit var navHostController: TestNavHostController
     private val mockViewModelFactory = mock(ViewModelFactory::class.java)
-    private val mockViewModel = mock(NoteListViewModel::class.java)
+    private val mockViewModel = mock(HomeViewModel::class.java)
     private val notesLiveData = MutableLiveData<List<Book>>()
     private val context = InstrumentationRegistry.getInstrumentation().targetContext
 
@@ -70,17 +70,17 @@ class BookListFragmentTest {
 
     @Before
     fun setUp() {
-        `when`(mockViewModelFactory.create(NoteListViewModel::class.java)).thenReturn(mockViewModel)
-        `when`(mockViewModel.notes).thenReturn(notesLiveData)
+        `when`(mockViewModelFactory.create(HomeViewModel::class.java)).thenReturn(mockViewModel)
+        `when`(mockViewModel.books).thenReturn(notesLiveData)
 
         // Set test NavHostController
         navHostController = TestNavHostController(context).apply {
             setGraph(R.navigation.nav_graph)
-            setCurrentDestination(R.id.note_list_fragment)
+            setCurrentDestination(R.id.home_fragment)
         }
 
         launchFragmentInContainer(themeResId = R.style.Theme_Templateapp) {
-            NoteListFragment().apply {
+            HomeFragment().apply {
                 onAttached {
                     viewModelFactory = mockViewModelFactory
                 }

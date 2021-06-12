@@ -4,7 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.example.app.data.NoteRepository
 import com.example.app.data.models.Book
-import com.example.app.ui.notes.NoteListViewModel
+import com.example.app.ui.home.HomeViewModel
 import com.example.app.utils.CoroutineTestRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
@@ -31,9 +31,9 @@ class BookListViewModelTest {
     fun `observe notes successful`() = runBlockingTest {
         val expectedNotes = emptyList<Book>()
         `when`(noteRepository.getNoteList()).thenReturn(flowOf(expectedNotes))
-        val viewModel = NoteListViewModel(noteRepository)
+        val viewModel = HomeViewModel(noteRepository)
 
-        val result = viewModel.notes
+        val result = viewModel.books
 
         result.observeForever(observer)
         assertEquals(expectedNotes, result.value)

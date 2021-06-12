@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private val appBarConfiguration: AppBarConfiguration by lazy {
         AppBarConfiguration.Builder(
-            R.id.note_list_fragment,
+            R.id.home_fragment,
             R.id.account_fragment,
         ).build()
     }
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             binding.bottomNav.visibility = when (destination.id) {
-                R.id.note_list_fragment,
+                R.id.home_fragment,
                 R.id.account_fragment -> View.VISIBLE
                 else -> View.GONE
             }

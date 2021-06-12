@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/note_list_fragment">
+    app:startDestination="@id/home_fragment">
 
     <fragment
-        android:id="@+id/note_list_fragment"
-        android:name="com.example.app.ui.notes.NoteListFragment"
-        tools:layout="@layout/note_list_fragment">
+        android:id="@+id/home_fragment"
+        android:name="com.example.app.ui.home.HomeFragment"
+        tools:layout="@layout/home_fragment">
         <action
-            android:id="@+id/action_note_list_fragment_to_note_detail_fragment"
+            android:id="@+id/action_book_fragment_to_note_detail_fragment"
             app:destination="@id/note_detail_fragment" />
     </fragment>
     <fragment

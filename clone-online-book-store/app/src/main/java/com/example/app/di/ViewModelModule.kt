@@ -5,8 +5,8 @@ import com.example.app.ui.account.AccountFragment
 import com.example.app.ui.account.AccountViewModel
 import com.example.app.ui.note_detail.NoteDetailFragment
 import com.example.app.ui.note_detail.NoteDetailViewModel
-import com.example.app.ui.notes.NoteListFragment
-import com.example.app.ui.notes.NoteListViewModel
+import com.example.app.ui.home.HomeFragment
+import com.example.app.ui.home.HomeViewModel
 import com.example.app.ui.splash_screen.SplashScreenFragment
 import com.example.app.ui.splash_screen.SplashScreenViewModel
 import com.example.app.util.ViewModelBuilder
@@ -24,7 +24,7 @@ abstract class ViewModelModule {
     internal abstract fun accountFragment(): AccountFragment
 
     @ContributesAndroidInjector(modules = [ViewModelBuilder::class])
-    internal abstract fun notesFragment(): NoteListFragment
+    internal abstract fun notesFragment(): HomeFragment
 
     @ContributesAndroidInjector(modules = [ViewModelBuilder::class])
     internal abstract fun noteDetailFragment(): NoteDetailFragment
@@ -39,8 +39,8 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(NoteListViewModel::class)
-    abstract fun bindNotesViewModel(viewModel: NoteListViewModel): ViewModel
+    @ViewModelKey(HomeViewModel::class)
+    abstract fun bindNotesViewModel(viewModel: HomeViewModel): ViewModel
 
     @Binds
     @IntoMap
