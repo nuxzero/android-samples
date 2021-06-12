@@ -17,7 +17,7 @@
     </style>
 
     <style name="TextAppearance.AppTheme.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins_bold</item>
     </style>
 
     <style name="TextAppearance.AppTheme.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
