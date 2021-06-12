@@ -2,6 +2,7 @@ package com.example.app.ui.binding
 
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.DrawableRes
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import java.text.DateFormat
@@ -13,6 +14,11 @@ fun setImageUrl(imageView: ImageView, imageUrl: String?) {
         .load(imageUrl)
         .centerCrop()
         .into(imageView)
+}
+
+@BindingAdapter("android:srcDrawable")
+fun setImageDrawable(imageView: ImageView, @DrawableRes drawableRes: Int) {
+    imageView.setImageResource(drawableRes)
 }
 
 @BindingAdapter("android:dateText")

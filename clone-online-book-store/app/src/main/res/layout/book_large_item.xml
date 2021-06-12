@@ -13,9 +13,9 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:transitionName="@{@string/book_item_transition_name(book.id)}"
+        android:background="?android:attr/selectableItemBackground"
         android:orientation="vertical"
-        android:background="?android:attr/selectableItemBackground">
+        android:transitionName="@{@string/book_item_transition_name(book.id)}">
 
         <ImageView
             android:id="@+id/thumb_image"
@@ -24,7 +24,7 @@
             android:layout_marginStart="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
-            android:srcUrl="@{book.image}"
+            android:srcDrawable="@{book.image}"
             tools:src="@tools:sample/avatars" />
 
         <TextView

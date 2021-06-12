@@ -30,7 +30,7 @@ class DatabaseModuleImpl : DatabaseModule {
     @Singleton
     override fun provideNoteDao(database: AppDatabase): NoteDao = object : NoteDao {
         override suspend fun getAll(): List<Book> {
-            return MockData.getAllNotes()
+            return MockData.getNewestBooks()
         }
 
         override suspend fun findById(id: Int): Book {

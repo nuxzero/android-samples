@@ -18,15 +18,15 @@ class BookRepositoryTest {
 
     private val noteApi: NoteApi = mock(NoteApi::class.java)
     private val noteDao: NoteDao = mock(NoteDao::class.java)
-    private val repository = NoteRepository(noteApi, noteDao)
+    private val repository = BooksRepository(noteApi, noteDao)
 
     @Test
     fun `get notes successful`() = runBlockingTest {
         val expectedNotes = emptyList<Book>()
-        `when`(noteApi.getNoteList()).thenReturn(expectedNotes)
+        `when`(noteApi.getNewestBooks()).thenReturn(expectedNotes)
         `when`(noteDao.getAll()).thenReturn(expectedNotes)
 
-        val result = repository.getNoteList().toList()
+        val result = repository.getNewestBooks().toList()
 
         assertEquals(2, result.size)
         assertEquals(expectedNotes, result.first())
@@ -41,10 +41,10 @@ class BookRepositoryTest {
             author = "John",
             createdAt = Date(),
             image = "Test",
-            note = "Test note",
+            shortDescription = "Test note",
         )
         `when`(noteDao.findById(1)).thenReturn(expectedNote)
-        `when`(noteApi.getNote(1)).thenReturn(expectedNote)
+        `when`(noteApi.getBook(1)).thenReturn(expectedNote)
 
 
         val result = repository.getNote(1).toList()

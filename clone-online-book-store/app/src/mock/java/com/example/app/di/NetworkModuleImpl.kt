@@ -36,11 +36,15 @@ class NetworkModuleImpl : NetworkModule {
     @Provides
     @Singleton
     override fun provideNoteApi(retrofit: Retrofit): NoteApi = object : NoteApi {
-        override suspend fun getNoteList(): List<Book> {
-            return MockData.getAllNotes()
+        override suspend fun getNewestBooks(): List<Book> {
+            return MockData.getNewestBooks()
         }
 
-        override suspend fun getNote(id: Int): Book {
+        override suspend fun getPopularBooks(): List<Book> {
+            return MockData.getPopularBooks()
+        }
+
+        override suspend fun getBook(id: Int): Book {
             return MockData.getNote(id)
         }
     }

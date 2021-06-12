@@ -10,22 +10,31 @@ import javax.inject.Singleton
 
 
 @Singleton
-class NoteRepository @Inject constructor(
+class BooksRepository @Inject constructor(
     private val noteApi: NoteApi,
     private val noteDao: NoteDao,
 ) {
-    fun getNoteList(): Flow<List<Book>> = flow {
+    fun getNewestBooks(): Flow<List<Book>> = flow {
         val cachedNotes = noteDao.getAll()
         emit(cachedNotes)
 
-        val networkNotes = noteApi.getNoteList()
+        val networkNotes = noteApi.getNewestBooks()
+        emit(networkNotes)
+        noteDao.insertAll(*networkNotes.toTypedArray())
+    }
+
+    fun getPopularBooks(): Flow<List<Book>> = flow {
+        val cachedNotes = noteDao.getAll()
+        emit(cachedNotes)
+
+        val networkNotes = noteApi.getPopularBooks()
         emit(networkNotes)
         noteDao.insertAll(*networkNotes.toTypedArray())
     }
 
     fun getNote(id: Int): Flow<Book> = flow {
         emit(noteDao.findById(id))
-        val note = noteApi.getNote(id)
+        val note = noteApi.getBook(id)
         emit(note)
         noteDao.insertAll(note)
     }

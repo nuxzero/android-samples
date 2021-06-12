@@ -7,8 +7,11 @@ import retrofit2.http.Path
 
 interface NoteApi {
     @GET("notes")
-    suspend fun getNoteList(): List<Book>
+    suspend fun getNewestBooks(): List<Book>
+
+    @GET("notes")
+    suspend fun getPopularBooks(): List<Book>
 
     @GET("notes/{id}")
-    suspend fun getNote(@Path("id") id: Int): Book
+    suspend fun getBook(@Path("id") id: Int): Book
 }

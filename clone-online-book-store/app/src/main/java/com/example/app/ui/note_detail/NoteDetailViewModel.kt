@@ -5,11 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.switchMap
-import com.example.app.data.NoteRepository
+import com.example.app.data.BooksRepository
 import com.example.app.data.models.Book
 import javax.inject.Inject
 
-class NoteDetailViewModel @Inject constructor(private val repository: NoteRepository) : ViewModel() {
+class NoteDetailViewModel @Inject constructor(private val repository: BooksRepository) : ViewModel() {
     private val bookId = MutableLiveData<Int>()
     val book: LiveData<Book> = bookId.switchMap { id ->
         repository.getNote(id).asLiveData()

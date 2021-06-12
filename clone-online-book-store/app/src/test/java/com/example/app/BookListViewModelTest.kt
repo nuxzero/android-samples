@@ -2,7 +2,7 @@ package com.example.app
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.example.app.data.NoteRepository
+import com.example.app.data.BooksRepository
 import com.example.app.data.models.Book
 import com.example.app.ui.home.HomeViewModel
 import com.example.app.utils.CoroutineTestRule
@@ -24,16 +24,16 @@ class BookListViewModelTest {
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()
 
-    private val noteRepository = mock(NoteRepository::class.java)
+    private val noteRepository = mock(BooksRepository::class.java)
     private val observer = mock(Observer::class.java) as Observer<List<Book>>
 
     @Test
     fun `observe notes successful`() = runBlockingTest {
         val expectedNotes = emptyList<Book>()
-        `when`(noteRepository.getNoteList()).thenReturn(flowOf(expectedNotes))
+        `when`(noteRepository.getNewestBooks()).thenReturn(flowOf(expectedNotes))
         val viewModel = HomeViewModel(noteRepository)
 
-        val result = viewModel.books
+        val result = viewModel.newestBooks
 
         result.observeForever(observer)
         assertEquals(expectedNotes, result.value)

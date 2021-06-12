@@ -3,13 +3,15 @@ package com.example.app.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.example.app.data.NoteRepository
+import com.example.app.data.BooksRepository
 import com.example.app.data.models.Book
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
-    private val noteRepository: NoteRepository,
+    private val noteRepository: BooksRepository,
 ) : ViewModel() {
 
-    val books: LiveData<List<Book>> = noteRepository.getNoteList().asLiveData()
+    val popularBooks: LiveData<List<Book>> = noteRepository.getPopularBooks().asLiveData()
+
+    val newestBooks: LiveData<List<Book>> = noteRepository.getNewestBooks().asLiveData()
 }

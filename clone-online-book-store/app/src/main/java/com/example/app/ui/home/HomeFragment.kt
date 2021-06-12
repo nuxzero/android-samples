@@ -50,7 +50,7 @@ class HomeFragment : BaseFragment() {
         val adapter = PopularBookListItemAdapter(::navigateToBookDetail)
         binding.popularBooksList.adapter = adapter
 
-        viewModel.books.observe(viewLifecycleOwner, { notes ->
+        viewModel.popularBooks.observe(viewLifecycleOwner, { notes ->
             adapter.setBooks(notes)
         })
     }
@@ -59,7 +59,7 @@ class HomeFragment : BaseFragment() {
         val adapter = BookListItemAdapter(::navigateToBookDetail)
         binding.noteList.adapter = adapter
 
-        viewModel.books.observe(viewLifecycleOwner, { notes ->
+        viewModel.newestBooks.observe(viewLifecycleOwner, { notes ->
             adapter.setNotes(notes)
         })
     }

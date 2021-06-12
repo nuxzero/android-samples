@@ -48,7 +48,7 @@ class BookListFragmentTest {
             author = "John Doe",
             createdAt = Date(),
             image = "https://picsum.photos/id/486/1280/720",
-            note = ""
+            shortDescription = ""
         ),
         Book(
             id = 2,
@@ -56,7 +56,7 @@ class BookListFragmentTest {
             author = "John Doe",
             createdAt = Date(),
             image = "https://picsum.photos/id/486/1280/720",
-            note = ""
+            shortDescription = ""
         ),
         Book(
             id = 3,
@@ -64,14 +64,14 @@ class BookListFragmentTest {
             author = "John Doe",
             createdAt = Date(),
             image = "https://picsum.photos/id/486/1280/720",
-            note = ""
+            shortDescription = ""
         ),
     )
 
     @Before
     fun setUp() {
         `when`(mockViewModelFactory.create(HomeViewModel::class.java)).thenReturn(mockViewModel)
-        `when`(mockViewModel.books).thenReturn(notesLiveData)
+        `when`(mockViewModel.newestBooks).thenReturn(notesLiveData)
 
         // Set test NavHostController
         navHostController = TestNavHostController(context).apply {

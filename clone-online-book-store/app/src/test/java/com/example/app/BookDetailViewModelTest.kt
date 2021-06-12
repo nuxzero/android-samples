@@ -2,7 +2,7 @@ package com.example.app
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.example.app.data.NoteRepository
+import com.example.app.data.BooksRepository
 import com.example.app.data.models.Book
 import com.example.app.ui.note_detail.NoteDetailViewModel
 import com.example.app.utils.CoroutineTestRule
@@ -24,7 +24,7 @@ class BookDetailViewModelTest {
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()
 
-    private val noteRepository = mock(NoteRepository::class.java)
+    private val noteRepository = mock(BooksRepository::class.java)
     private val observer = mock(Observer::class.java) as Observer<Book>
 
     @Test
@@ -35,7 +35,7 @@ class BookDetailViewModelTest {
             author = "John",
             createdAt = Date(),
             image = "Test",
-            note = "Test note",
+            shortDescription = "Test note",
         )
         `when`(noteRepository.getNote(1)).thenReturn(flowOf(expectedNote))
         val viewModel = NoteDetailViewModel(noteRepository)
