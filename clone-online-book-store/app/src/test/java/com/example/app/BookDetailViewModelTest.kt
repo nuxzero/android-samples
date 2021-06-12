@@ -4,7 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.example.app.data.BooksRepository
 import com.example.app.data.models.Book
-import com.example.app.ui.note_detail.NoteDetailViewModel
+import com.example.app.ui.book_detail.BookDetailViewModel
 import com.example.app.utils.CoroutineTestRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
@@ -38,7 +38,7 @@ class BookDetailViewModelTest {
             shortDescription = "Test note",
         )
         `when`(noteRepository.getNote(1)).thenReturn(flowOf(expectedNote))
-        val viewModel = NoteDetailViewModel(noteRepository)
+        val viewModel = BookDetailViewModel(noteRepository)
 
         viewModel.setNoteId(1)
 

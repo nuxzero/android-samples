@@ -1,4 +1,4 @@
-package com.example.app.ui.note_detail
+package com.example.app.ui.book_detail
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,7 +9,7 @@ import com.example.app.data.BooksRepository
 import com.example.app.data.models.Book
 import javax.inject.Inject
 
-class NoteDetailViewModel @Inject constructor(private val repository: BooksRepository) : ViewModel() {
+class BookDetailViewModel @Inject constructor(private val repository: BooksRepository) : ViewModel() {
     private val bookId = MutableLiveData<Int>()
     val book: LiveData<Book> = bookId.switchMap { id ->
         repository.getNote(id).asLiveData()

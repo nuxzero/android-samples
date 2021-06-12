@@ -6,6 +6,7 @@
     <dimen name="margin_xsmall">4dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
     <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
 
     <dimen name="book_large_width">131dp</dimen>
     <dimen name="book_large_height">192dp</dimen>

@@ -11,12 +11,12 @@
         tools:layout="@layout/home_fragment">
         <action
             android:id="@+id/action_book_fragment_to_note_detail_fragment"
-            app:destination="@id/note_detail_fragment" />
+            app:destination="@id/book_detail_fragment" />
     </fragment>
     <fragment
-        android:id="@+id/note_detail_fragment"
-        android:name="com.example.app.ui.note_detail.NoteDetailFragment"
-        tools:layout="@layout/note_detail_fragment">
+        android:id="@+id/book_detail_fragment"
+        android:name="com.example.app.ui.book_detail.BookDetailFragment"
+        tools:layout="@layout/book_detail_fragment">
         <argument
             android:name="book"
             app:argType="com.example.app.data.models.Book" />

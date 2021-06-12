@@ -113,7 +113,7 @@ class BookListFragmentTest {
 
         onView(withId(R.id.note_list)).perform(actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
 
-        assertEquals(R.id.note_detail_fragment, navHostController.currentDestination?.id)
+        assertEquals(R.id.book_detail_fragment, navHostController.currentDestination?.id)
         assertNotNull(navHostController.currentDestination!!.arguments["note"])
     }
 }
