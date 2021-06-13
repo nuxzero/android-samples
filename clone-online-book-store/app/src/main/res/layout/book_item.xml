@@ -67,6 +67,7 @@
             android:progressTint="@color/yellow"
             app:layout_constraintStart_toStartOf="@id/title_text"
             app:layout_constraintTop_toBottomOf="@id/author_text"
+            android:rating="@{book.rating}"
             tools:rating="2.5" />
 
         <ImageView

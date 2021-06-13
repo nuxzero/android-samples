@@ -23,4 +23,5 @@ data class Book(
     @DrawableRes
     val image: Int,
     val shortDescription: String,
+    val rating: Double,
 ) : Parcelable

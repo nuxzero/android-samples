@@ -15,7 +15,8 @@ object MockData {
             author = "Dana Thomas",
             createdAt = Date(),
             image = R.drawable.book_1,
-            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion.",
+            rating = 4.5,
         ),
         Book(
             id = 2,
@@ -23,7 +24,8 @@ object MockData {
             author = "Patrick Mauriès",
             createdAt = Date(),
             image = R.drawable.book_2,
-            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion.",
+            rating = 4.0,
         ),
         Book(
             id = 3,
@@ -31,7 +33,8 @@ object MockData {
             author = "June & Lucy",
             createdAt = Date(),
             image = R.drawable.book_3,
-            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion.",
+            rating = 4.25,
         ),
         Book(
             id = 4,
@@ -39,7 +42,8 @@ object MockData {
             author = "Suzy Menkes",
             createdAt = Date(),
             image = R.drawable.book_4,
-            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion.",
+            rating = 3.0,
         ),
         Book(
             id = 5,
@@ -47,7 +51,8 @@ object MockData {
             author = "Rudolf Koch",
             createdAt = Date(),
             image = R.drawable.book_5,
-            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+            shortDescription = "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion.",
+            rating = 3.5,
         ),
     )
 
