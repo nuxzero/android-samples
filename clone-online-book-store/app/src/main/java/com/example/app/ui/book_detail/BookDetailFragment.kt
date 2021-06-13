@@ -30,6 +30,7 @@ class BookDetailFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         NavigationUI.setupWithNavController(binding.toolbar, findNavController())
+        binding.toolbar.setNavigationIcon(R.drawable.ic_arrow_left)
 
         sharedElementEnterTransition = MaterialContainerTransform().apply {
             drawingViewId = R.id.nav_host_fragment
