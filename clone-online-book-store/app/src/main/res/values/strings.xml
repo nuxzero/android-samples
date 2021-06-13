@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">book-store</string>
+    <string name="book_item_transition_name">book item ID: %d</string>
+    <string name="book_detail_transition_name">book detail transition</string>
+    <string name="search_menu">Search</string>
+    <string name="book_detail_rating">%s/5.0</string>
+</resources>
