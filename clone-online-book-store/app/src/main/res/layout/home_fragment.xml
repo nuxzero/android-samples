@@ -24,11 +24,12 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/profile_image"
                     android:layout_width="@dimen/toolbar_profile_image_size"
                     android:layout_height="@dimen/toolbar_profile_image_size"
                     android:layout_marginStart="@dimen/margin_small"
+                    app:shapeAppearanceOverlay="@style/ProfileImageShapeOverlay"
                     android:src="@drawable/profile" />
 
                 <TextView
