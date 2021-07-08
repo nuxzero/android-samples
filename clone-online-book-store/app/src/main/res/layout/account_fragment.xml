@@ -39,7 +39,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profile_image"
                 android:layout_width="@dimen/thumb_image_size"
                 android:layout_height="@dimen/thumb_image_size"
@@ -49,6 +49,7 @@
                 android:srcUrl="@{profile.image}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/LargeProfileImageShapeOverlay"
                 tools:src="@tools:sample/avatars" />
 
             <TextView

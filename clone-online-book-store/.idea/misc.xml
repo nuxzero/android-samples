@@ -23,10 +23,11 @@
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.5796875" />
         <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.5796875" />
         <entry key="app/src/main/res/drawable/ic_shopping_cart.xml" value="0.5796875" />
+        <entry key="app/src/main/res/layout/account_fragment.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/book_detail_fragment.xml" value="0.42716146861429133" />
         <entry key="app/src/main/res/layout/book_item.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/book_large_item.xml" value="0.5635416666666667" />
-        <entry key="app/src/main/res/layout/home_fragment.xml" value="0.34802187198456097" />
+        <entry key="app/src/main/res/layout/home_fragment.xml" value="0.75" />
         <entry key="app/src/main/res/layout/main_activity.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/note_detail_fragment.xml" value="0.296195652173913" />
         <entry key="app/src/main/res/layout/note_item.xml" value="0.2269021739130435" />

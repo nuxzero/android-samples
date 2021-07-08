@@ -17,19 +17,20 @@
         android:orientation="vertical"
         android:transitionName="@{@string/book_item_transition_name(book.id)}">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/thumb_image"
             android:layout_width="@dimen/book_large_width"
             android:layout_height="@dimen/book_large_height"
             android:layout_marginStart="@dimen/margin_medium"
-            android:layout_marginEnd="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
             android:scaleType="centerCrop"
             android:srcDrawable="@{book.image}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/LargeBookThumbImageShapeOverlay"
             tools:src="@drawable/book_2" />
 
         <TextView
@@ -54,10 +55,10 @@
             android:layout_marginBottom="@dimen/margin_medium"
             android:text="@{book.author}"
             android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/thumb_image"
             app:layout_constraintStart_toStartOf="@id/thumb_image"
             app:layout_constraintTop_toBottomOf="@id/title_text"
-            app:layout_constraintBottom_toBottomOf="parent"
             tools:text="John Doe" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

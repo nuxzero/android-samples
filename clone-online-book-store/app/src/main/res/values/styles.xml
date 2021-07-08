@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ProfileImageShapeOverlay">
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="LargeProfileImageShapeOverlay">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="BookThumbImageShapeOverlay">
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeBottomRight">8dp</item>
+        <item name="cornerSizeTopLeft">4dp</item>
+        <item name="cornerSizeBottomLeft">4dp</item>
+    </style>
+
+    <style name="LargeBookThumbImageShapeOverlay">
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeBottomRight">8dp</item>
+        <item name="cornerSizeTopLeft">4dp</item>
+        <item name="cornerSizeBottomLeft">4dp</item>
+    </style>
+
+    <style name="BookImageShapeOverlay">
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+        <item name="cornerSizeBottomLeft">8dp</item>
+    </style>
+</resources>
