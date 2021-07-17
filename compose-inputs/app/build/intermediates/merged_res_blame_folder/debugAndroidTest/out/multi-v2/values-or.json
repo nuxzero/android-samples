@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/nux/Developments/nuxzero/android-samples/compose-inputs/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-or/values-or.xml",
+            "map": [
+                {
+                    "source": "/Users/nux/.gradle/caches/transforms-3/0e85fc22b526c7ecc0ac80df3a05635c/transformed/core-1.6.0/res/values-or/values-or.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "954",
+                        "endColumns": "100",
+                        "endOffsets": "1050"
+                    }
+                },
+                {
+                    "source": "/Users/nux/.gradle/caches/transforms-3/d98efe12a408faaff2b5a2f0e120bd3b/transformed/jetified-ui-1.0.0-rc01/res/values-or/values-or.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,202,289,381,458,569,657,744,814,884,954,1021",
+                        "endColumns": "96,86,91,76,110,87,86,69,69,69,66,118",
+                        "endOffsets": "197,284,376,453,564,652,739,809,879,949,1016,1135"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,202,289,381,458,569,657,744,814,884,1055,1122",
+                        "endColumns": "96,86,91,76,110,87,86,69,69,69,66,118",
+                        "endOffsets": "197,284,376,453,564,652,739,809,879,949,1117,1236"
+                    }
+                }
+            ]
+        }
+    ]
+}

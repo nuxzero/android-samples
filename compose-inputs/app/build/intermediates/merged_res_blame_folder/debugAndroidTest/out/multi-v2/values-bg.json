@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/nux/Developments/nuxzero/android-samples/compose-inputs/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-bg/values-bg.xml",
+            "map": [
+                {
+                    "source": "/Users/nux/.gradle/caches/transforms-3/d98efe12a408faaff2b5a2f0e120bd3b/transformed/jetified-ui-1.0.0-rc01/res/values-bg/values-bg.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,301,404,480,590,681,765,832,898,970,1039",
+                        "endColumns": "102,92,102,75,109,90,83,66,65,71,68,120",
+                        "endOffsets": "203,296,399,475,585,676,760,827,893,965,1034,1155"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,301,404,480,590,681,765,832,898,1071,1140",
+                        "endColumns": "102,92,102,75,109,90,83,66,65,71,68,120",
+                        "endOffsets": "203,296,399,475,585,676,760,827,893,965,1135,1256"
+                    }
+                },
+                {
+                    "source": "/Users/nux/.gradle/caches/transforms-3/0e85fc22b526c7ecc0ac80df3a05635c/transformed/core-1.6.0/res/values-bg/values-bg.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "970",
+                        "endColumns": "100",
+                        "endOffsets": "1066"
+                    }
+                }
+            ]
+        }
+    ]
+}
