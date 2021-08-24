@@ -7,6 +7,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CancellationSignal
+import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button.setOnClickListener{showBiometricAuth()}
+        button.setOnClickListener { showBiometricAuth() }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.P)
@@ -30,20 +31,21 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Do something", Toast.LENGTH_SHORT).show()
         }
 
-        val clickListener= DialogInterface.OnClickListener { dialog, which ->
+        val clickListener = DialogInterface.OnClickListener { dialog, which ->
             Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show()
         }
         val promt = BiometricPrompt.Builder(this)
-                .setTitle("Verify user")
-                .setSubtitle("Required Android P")
-                .setDescription("Use biometric to verify user")
-                .setNegativeButton("Cancel", executor, clickListener)
-                .build()
+            .setTitle("Verify user")
+            .setSubtitle("Required Android P")
+            .setDescription("Use biometric to verify user")
+            .setNegativeButton("Cancel", executor, clickListener)
+            .build()
 
-        val authenticationCallback = object: BiometricPrompt.AuthenticationCallback() {
+        val authenticationCallback = object : BiometricPrompt.AuthenticationCallback() {
             override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
                 super.onAuthenticationError(errorCode, errString)
 
+                Log.e(TAG, "[CODE $errorCode] ${errString.toString()}")
                 Toast.makeText(this@MainActivity, "Do something onAuthenticationError()", Toast.LENGTH_SHORT).show()
             }
 
@@ -66,5 +68,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
         promt.authenticate(CancellationSignal(), this.mainExecutor, authenticationCallback)
+    }
+
+    companion object {
+        private const val TAG = "MainActivity"
     }
 }
