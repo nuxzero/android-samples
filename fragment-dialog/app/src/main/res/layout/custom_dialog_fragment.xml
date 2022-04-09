@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.main.CustomDialogFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="48dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <FrameLayout
+            android:id="@+id/customViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="@{title}"
+            android:textFontWeight="400"
+            android:textSize="18sp"
+            android:visibility="@{title == null ? View.GONE : View.VISIBLE}"
+            tools:text="Dialog Title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{message}"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:visibility="@{message == null ? View.GONE : View.VISIBLE}"
+            tools:text="Dialog Message" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:onClickListener="@{onClickNegative}"
+                android:text="@{negativeButtonText}"
+                tools:backgroundTint="@color/background_button_secondary"
+                android:visibility="@{negativeButtonText == null ? View.GONE : View.VISIBLE}"
+                android:textColor="@color/black"
+                tools:text="Cancel" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@{dialogType == DialogType.DANGER ? @color/background_button_danger : @color/background_button_primary}"
+                android:onClickListener="@{onClickPositive}"
+                android:text="@{positiveButtonText}"
+                android:visibility="@{positiveButtonText == null ? View.GONE : View.VISIBLE}"
+                android:textColor="@color/white"
+                tools:backgroundTint="@color/background_button_danger"
+                tools:text="Confirm" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.example.app.ui.main.DialogType" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="message"
+            type="String" />
+
+        <variable
+            name="positiveButtonText"
+            type="String" />
+
+        <variable
+            name="negativeButtonText"
+            type="String" />
+
+        <variable
+            name="dialogType"
+            type="com.example.app.ui.main.DialogType" />
+
+        <variable
+            name="onClickPositive"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onClickNegative"
+            type="android.view.View.OnClickListener" />
+    </data>
+</layout>
