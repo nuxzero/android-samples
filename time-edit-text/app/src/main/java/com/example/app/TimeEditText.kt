@@ -28,11 +28,6 @@ class TimeEditText : AppCompatEditText, TextWatcher {
         filters = arrayOf(InputFilter.LengthFilter(5))
         inputType = TYPE_CLASS_DATETIME or TYPE_DATETIME_VARIATION_TIME
         addTextChangedListener(this)
-
-        // Prevent type ':' by user
-        setOnKeyListener { _, _, event ->
-            event?.unicodeChar?.toChar() == DELIMITER
-        }
     }
 
     override fun onSelectionChanged(selStart: Int, selEnd: Int) {
@@ -54,6 +49,8 @@ class TimeEditText : AppCompatEditText, TextWatcher {
         editable?.let {
             if (it.length == 2 && it.last() != DELIMITER) it.append(DELIMITER)
 
+            // Prevent type ':' by user
+            if (it.lastIndex != 2 && it.isNotEmpty() && it.last() == DELIMITER) it.delete(it.length - 1, it.length)
         }
     }
 
@@ -64,7 +61,7 @@ class TimeEditText : AppCompatEditText, TextWatcher {
         Log.i(TAG, "onKeyDown: $char, currentPosition: $currentPosition")
         Log.i(TAG, "onKeyDown: hourText: $hourText, minText: $minuteText")
 
-        if (keyCode == KeyEvent.KEYCODE_DEL && text?.lastOrNull() == DELIMITER) {
+        if (text?.length ?: 0 > 1 && keyCode == KeyEvent.KEYCODE_DEL && text?.lastOrNull() == DELIMITER) {
             text?.let { it.delete(it.lastIndex - 1, it.length) }
             return true
         }

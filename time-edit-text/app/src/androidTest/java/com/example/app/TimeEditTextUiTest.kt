@@ -1,7 +1,9 @@
 package com.example.app
 
+import android.view.KeyEvent
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.pressKey
 import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.withId
@@ -59,6 +61,13 @@ class TimeEditTextUiTest {
     fun delimiter_notAbleToTypeDelimiter() {
         onView(withId(R.id.time_edit_text))
             .perform(typeText(":"))
+            .check(matches(withText("")))
+    }
+
+    @Test
+    fun delete_ableToDeleteSingleDigit() {
+        onView(withId(R.id.time_edit_text))
+            .perform(typeText(":"), pressKey(KeyEvent.KEYCODE_DEL))
             .check(matches(withText("")))
     }
 }
