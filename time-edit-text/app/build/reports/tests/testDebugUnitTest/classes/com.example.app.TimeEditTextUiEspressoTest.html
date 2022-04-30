@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.example.app.TimeEditTextUiEspressoTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.example.app.TimeEditTextUiEspressoTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.app.html">com.example.app</a> &gt; TimeEditTextUiEspressoTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">7</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">6</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.979s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">14%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="hourText_appendDelimiterIfHourTextLengthIsTwo"></a>
+<h3 class="failures">hourText_appendDelimiterIfHourTextLengthIsTwo</h3>
+<span class="code">
+<pre>androidx.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@6cd887ce, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at java.base@11.0.15/java.lang.Thread.getStackTrace(Thread.java:1602)
+	at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)
+	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:5)
+	at androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)
+	at com.example.app.TimeEditTextUiEspressoTest.hourText_appendDelimiterIfHourTextLengthIsTwo(TimeEditTextUiEspressoTest.kt:55)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
+	at app//org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
+	at app//org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
+	at java.base@11.0.15/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.15/java.lang.Thread.run(Thread.java:829)
+Caused by: junit.framework.AssertionFailedError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@6cd887ce, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at androidx.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:16)
+	at androidx.test.espresso.assertion.ViewAssertions$MatchesViewAssertion.check(ViewAssertions.java:11)
+	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAssertion.check(ViewInteraction.java:2)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:12)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:1)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at android.os.Handler.$$robo$$android_os_Handler$handleCallback(Handler.java:938)
+	at android.os.Handler.handleCallback(Handler.java)
+	at android.os.Handler.$$robo$$android_os_Handler$dispatchMessage(Handler.java:99)
+	at android.os.Handler.dispatchMessage(Handler.java)
+	at org.robolectric.shadows.ShadowPausedLooper$IdlingRunnable.run(ShadowPausedLooper.java:332)
+	at org.robolectric.shadows.ShadowPausedLooper.executeOnLooper(ShadowPausedLooper.java:366)
+	at org.robolectric.shadows.ShadowPausedLooper.idle(ShadowPausedLooper.java:92)
+	at org.robolectric.android.internal.LocalControlledLooper.drainMainThreadUntilIdle(LocalControlledLooper.java:17)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:1)
+	... 19 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="hourText_insertZeroAndAppendDelimiterIfFirstDigitMoreThanTwo"></a>
+<h3 class="failures">hourText_insertZeroAndAppendDelimiterIfFirstDigitMoreThanTwo</h3>
+<span class="code">
+<pre>androidx.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;03:&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;03:&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@2e764003, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at java.base@11.0.15/java.lang.Thread.getStackTrace(Thread.java:1602)
+	at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)
+	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:5)
+	at androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)
+	at com.example.app.TimeEditTextUiEspressoTest.hourText_insertZeroAndAppendDelimiterIfFirstDigitMoreThanTwo(TimeEditTextUiEspressoTest.kt:48)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
+	at app//org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
+	at app//org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
+	at java.base@11.0.15/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.15/java.lang.Thread.run(Thread.java:829)
+Caused by: junit.framework.AssertionFailedError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;03:&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;03:&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@2e764003, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at androidx.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:16)
+	at androidx.test.espresso.assertion.ViewAssertions$MatchesViewAssertion.check(ViewAssertions.java:11)
+	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAssertion.check(ViewInteraction.java:2)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:12)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:1)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at android.os.Handler.$$robo$$android_os_Handler$handleCallback(Handler.java:938)
+	at android.os.Handler.handleCallback(Handler.java)
+	at android.os.Handler.$$robo$$android_os_Handler$dispatchMessage(Handler.java:99)
+	at android.os.Handler.dispatchMessage(Handler.java)
+	at org.robolectric.shadows.ShadowPausedLooper$IdlingRunnable.run(ShadowPausedLooper.java:332)
+	at org.robolectric.shadows.ShadowPausedLooper.executeOnLooper(ShadowPausedLooper.java:366)
+	at org.robolectric.shadows.ShadowPausedLooper.idle(ShadowPausedLooper.java:92)
+	at org.robolectric.android.internal.LocalControlledLooper.drainMainThreadUntilIdle(LocalControlledLooper.java:17)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:1)
+	... 19 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="hourText_noInsertZeroIfFirstDigitLessThanTwo"></a>
+<h3 class="failures">hourText_noInsertZeroIfFirstDigitLessThanTwo</h3>
+<span class="code">
+<pre>androidx.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;1&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;1&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@177ee068, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at java.base@11.0.15/java.lang.Thread.getStackTrace(Thread.java:1602)
+	at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)
+	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:5)
+	at androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)
+	at com.example.app.TimeEditTextUiEspressoTest.hourText_noInsertZeroIfFirstDigitLessThanTwo(TimeEditTextUiEspressoTest.kt:41)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
+	at app//org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
+	at app//org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
+	at java.base@11.0.15/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.15/java.lang.Thread.run(Thread.java:829)
+Caused by: junit.framework.AssertionFailedError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;1&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;1&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@177ee068, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at androidx.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:16)
+	at androidx.test.espresso.assertion.ViewAssertions$MatchesViewAssertion.check(ViewAssertions.java:11)
+	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAssertion.check(ViewInteraction.java:2)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:12)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:1)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at android.os.Handler.$$robo$$android_os_Handler$handleCallback(Handler.java:938)
+	at android.os.Handler.handleCallback(Handler.java)
+	at android.os.Handler.$$robo$$android_os_Handler$dispatchMessage(Handler.java:99)
+	at android.os.Handler.dispatchMessage(Handler.java)
+	at org.robolectric.shadows.ShadowPausedLooper$IdlingRunnable.run(ShadowPausedLooper.java:332)
+	at org.robolectric.shadows.ShadowPausedLooper.executeOnLooper(ShadowPausedLooper.java:366)
+	at org.robolectric.shadows.ShadowPausedLooper.idle(ShadowPausedLooper.java:92)
+	at org.robolectric.android.internal.LocalControlledLooper.drainMainThreadUntilIdle(LocalControlledLooper.java:17)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:1)
+	... 19 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="minuteText_insertZeroIfFirstDigitMoreThanSix"></a>
+<h3 class="failures">minuteText_insertZeroIfFirstDigitMoreThanSix</h3>
+<span class="code">
+<pre>androidx.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:06&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:06&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@2cacc447, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at java.base@11.0.15/java.lang.Thread.getStackTrace(Thread.java:1602)
+	at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)
+	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:5)
+	at androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)
+	at com.example.app.TimeEditTextUiEspressoTest.minuteText_insertZeroIfFirstDigitMoreThanSix(TimeEditTextUiEspressoTest.kt:69)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
+	at app//org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
+	at app//org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
+	at java.base@11.0.15/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.15/java.lang.Thread.run(Thread.java:829)
+Caused by: junit.framework.AssertionFailedError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:06&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:06&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@2cacc447, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at androidx.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:16)
+	at androidx.test.espresso.assertion.ViewAssertions$MatchesViewAssertion.check(ViewAssertions.java:11)
+	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAssertion.check(ViewInteraction.java:2)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:12)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:1)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at android.os.Handler.$$robo$$android_os_Handler$handleCallback(Handler.java:938)
+	at android.os.Handler.handleCallback(Handler.java)
+	at android.os.Handler.$$robo$$android_os_Handler$dispatchMessage(Handler.java:99)
+	at android.os.Handler.dispatchMessage(Handler.java)
+	at org.robolectric.shadows.ShadowPausedLooper$IdlingRunnable.run(ShadowPausedLooper.java:332)
+	at org.robolectric.shadows.ShadowPausedLooper.executeOnLooper(ShadowPausedLooper.java:366)
+	at org.robolectric.shadows.ShadowPausedLooper.idle(ShadowPausedLooper.java:92)
+	at org.robolectric.android.internal.LocalControlledLooper.drainMainThreadUntilIdle(LocalControlledLooper.java:17)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:1)
+	... 19 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="minuteText_notInsertZeroIfFirstDigitLessThanSix"></a>
+<h3 class="failures">minuteText_notInsertZeroIfFirstDigitLessThanSix</h3>
+<span class="code">
+<pre>androidx.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:30&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:30&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@7164d39c, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at java.base@11.0.15/java.lang.Thread.getStackTrace(Thread.java:1602)
+	at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)
+	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:5)
+	at androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)
+	at com.example.app.TimeEditTextUiEspressoTest.minuteText_notInsertZeroIfFirstDigitLessThanSix(TimeEditTextUiEspressoTest.kt:62)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
+	at app//org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
+	at app//org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
+	at java.base@11.0.15/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.15/java.lang.Thread.run(Thread.java:829)
+Caused by: junit.framework.AssertionFailedError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:30&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;12:30&quot;
+     Got: view.getText() was &quot;&quot; transformed text was &quot;&quot;
+View Details: TimeEditText{id=2131231162, res-name=time_edit_text, visibility=VISIBLE, width=100, height=44, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@7164d39c, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x24 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=12:00 label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=124.0, text=, hint=12:00, input-type=36, ime-target=false, has-links=false}
+
+	at androidx.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:16)
+	at androidx.test.espresso.assertion.ViewAssertions$MatchesViewAssertion.check(ViewAssertions.java:11)
+	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAssertion.check(ViewInteraction.java:2)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:12)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:1)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at android.os.Handler.$$robo$$android_os_Handler$handleCallback(Handler.java:938)
+	at android.os.Handler.handleCallback(Handler.java)
+	at android.os.Handler.$$robo$$android_os_Handler$dispatchMessage(Handler.java:99)
+	at android.os.Handler.dispatchMessage(Handler.java)
+	at org.robolectric.shadows.ShadowPausedLooper$IdlingRunnable.run(ShadowPausedLooper.java:332)
+	at org.robolectric.shadows.ShadowPausedLooper.executeOnLooper(ShadowPausedLooper.java:366)
+	at org.robolectric.shadows.ShadowPausedLooper.idle(ShadowPausedLooper.java:92)
+	at org.robolectric.android.internal.LocalControlledLooper.drainMainThreadUntilIdle(LocalControlledLooper.java:17)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:1)
+	... 19 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testEditText"></a>
+<h3 class="failures">testEditText</h3>
+<span class="code">
+<pre>androidx.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;test&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;test&quot;
+     Got: view.getText() was &quot;&quot;
+View Details: AppCompatEditText{id=2131231064, res-name=sample_edit_text, visibility=VISIBLE, width=100, height=41, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@7aabf875, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x20001 imeOptions=0x44000006 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=192.0, text=, input-type=131073, ime-target=false, has-links=false}
+
+	at java.base@11.0.15/java.lang.Thread.getStackTrace(Thread.java:1602)
+	at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)
+	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:5)
+	at androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)
+	at com.example.app.TimeEditTextUiEspressoTest.testEditText(TimeEditTextUiEspressoTest.kt:34)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
+	at app//org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
+	at app//org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
+	at java.base@11.0.15/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.15/java.lang.Thread.run(Thread.java:829)
+Caused by: junit.framework.AssertionFailedError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;test&quot;' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: is &quot;test&quot;
+     Got: view.getText() was &quot;&quot;
+View Details: AppCompatEditText{id=2131231064, res-name=sample_edit_text, visibility=VISIBLE, width=100, height=41, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.LinearLayoutCompat$LayoutParams@7aabf875, tag=null, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x20001 imeOptions=0x44000006 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=null autofillId=null fieldId=0 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], x=110.0, y=192.0, text=, input-type=131073, ime-target=false, has-links=false}
+
+	at androidx.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:16)
+	at androidx.test.espresso.assertion.ViewAssertions$MatchesViewAssertion.check(ViewAssertions.java:11)
+	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAssertion.check(ViewInteraction.java:2)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:12)
+	at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:1)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at android.os.Handler.$$robo$$android_os_Handler$handleCallback(Handler.java:938)
+	at android.os.Handler.handleCallback(Handler.java)
+	at android.os.Handler.$$robo$$android_os_Handler$dispatchMessage(Handler.java:99)
+	at android.os.Handler.dispatchMessage(Handler.java)
+	at org.robolectric.shadows.ShadowPausedLooper$IdlingRunnable.run(ShadowPausedLooper.java:332)
+	at org.robolectric.shadows.ShadowPausedLooper.executeOnLooper(ShadowPausedLooper.java:366)
+	at org.robolectric.shadows.ShadowPausedLooper.idle(ShadowPausedLooper.java:92)
+	at org.robolectric.android.internal.LocalControlledLooper.drainMainThreadUntilIdle(LocalControlledLooper.java:17)
+	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:1)
+	... 19 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">hourText_appendDelimiterIfHourTextLengthIsTwo</td>
+<td class="failures">3.458s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">hourText_insertZeroAndAppendDelimiterIfFirstDigitMoreThanTwo</td>
+<td class="failures">0.047s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">hourText_noInsertZeroIfFirstDigitLessThanTwo</td>
+<td class="failures">0.092s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">minuteText_insertZeroIfFirstDigitMoreThanSix</td>
+<td class="failures">0.086s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">minuteText_notInsertZeroIfFirstDigitLessThanSix</td>
+<td class="failures">0.073s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testEditText</td>
+<td class="failures">0.119s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">testTextView</td>
+<td class="success">0.104s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>resources.arsc in APK '/Users/nux/.m2/repository/org/robolectric/android-all-instrumented/12-robolectric-7732740-i3/android-all-instrumented-12-robolectric-7732740-i3.jar' is compressed.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.2</a> at Apr 30, 2022, 1:38:17 PM</p>
+</div>
+</div>
+</body>
+</html>
