@@ -22,6 +22,19 @@ class TimeEditTextUiEspressoTest {
     }
 
     @Test
+    fun testTextView() {
+        onView(withId(R.id.text_view)).check(matches(withText("test")))
+    }
+
+    @Test
+    fun testEditText() {
+        onView(withId(R.id.sample_edit_text))
+            .perform()
+            .perform(typeText("test"))
+            .check(matches(withText("test")))
+    }
+
+    @Test
     fun hourText_noInsertZeroIfFirstDigitLessThanTwo() {
         onView(withId(R.id.time_edit_text))
             .perform(typeText("1"))
