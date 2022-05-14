@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.app.databinding.CustomContentViewBinding
 import com.example.app.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
@@ -29,21 +30,38 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         binding.run {
-            button.setOnClickListener {
-                CustomDialogFragment.newInstance(
-                    dialogType = DialogType.DANGER,
-                    title = "Dialog title",
-                    message = "Dialog message.",
-                    negativeButton = "Cancel",
-                    positiveButton = "OK",
-                    onPositiveClickListener = {
-                        Log.i("MainFragment", "clicked positive")
-                    }
-                ).show(childFragmentManager, null)
-            }
+            defaultDialogButton.setOnClickListener { showDefaultDialog() }
+            customViewDialogButton.setOnClickListener { showCustomContentDialog() }
         }
+    }
+
+    private fun showDefaultDialog() {
+        CustomDialogFragment.newInstance(
+            dialogType = DialogType.DANGER,
+            title = "Dialog title",
+            message = "Dialog message.",
+            negativeButton = "Cancel",
+            positiveButton = "OK",
+            onPositiveClickListener = {
+                Log.i("MainFragment", "clicked positive")
+            }
+        ).show(childFragmentManager, null)
+    }
+
+    private fun showCustomContentDialog() {
+        val customContentView = CustomContentViewBinding.inflate(LayoutInflater.from(requireContext()))
+        CustomDialogFragment.newInstance(
+            dialogType = DialogType.DANGER,
+            customView = customContentView.root,
+            title = "Custom content dialog",
+            negativeButton = "Cancel",
+            positiveButton = "OK",
+            onPositiveClickListener = {
+                Log.i("MainFragment", "clicked positive")
+            }
+        ).show(childFragmentManager, null)
     }
 }
