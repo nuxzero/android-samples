@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background_dialog.xml" value="0.152" />
+        <entry key="app/src/main/res/layout/custom_content_view.xml" value="0.1" />
         <entry key="app/src/main/res/layout/custom_dialog_fragment.xml" value="0.16798044840494794" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.2682291666666667" />
       </map>
