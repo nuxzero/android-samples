@@ -3,9 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/barcode_scanner_view.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/custom_barcode_scanner.xml" value="0.5635416666666667" />
-        <entry key="app/src/main/res/layout/main_fragment.xml" value="0.5494791666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4128289473684211" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.27794871794871795" />
       </map>
     </option>
   </component>
