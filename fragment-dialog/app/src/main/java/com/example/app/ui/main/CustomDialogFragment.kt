@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.children
 import androidx.fragment.app.DialogFragment
 import com.example.app.R
 import com.example.app.databinding.CustomDialogFragmentBinding
@@ -58,7 +59,11 @@ class CustomDialogFragment : DialogFragment() {
                 onClickNegative = View.OnClickListener {
                     dismiss()
                 }
-                customView?.let { customViewContainer.addView(it) }
+                customView?.let {
+                    if (!customViewContainer.children.contains(it)) {
+                        customViewContainer.addView(it)
+                    }
+                }
             }
         }
     }
@@ -68,6 +73,13 @@ class CustomDialogFragment : DialogFragment() {
         dialog?.apply {
             setCanceledOnTouchOutside(true)
         }
+    }
+
+    override fun onDestroy() {
+        customView?.let {
+            binding.customViewContainer.removeAllViews()
+        }
+        super.onDestroy()
     }
 
     companion object {

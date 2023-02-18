@@ -11,9 +11,16 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/defaultDialogButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show dialog" />
+            android:text="Default dialog" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customViewDialogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Custom content dialog" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>
