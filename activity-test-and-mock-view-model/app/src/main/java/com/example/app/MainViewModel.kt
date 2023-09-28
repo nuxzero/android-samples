@@ -1,10 +1,12 @@
 package com.example.app
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
+private const val TAG = "MainViewModel"
 
 open class MainViewModel(private val repository: UserRepository) : ViewModel() {
 
@@ -16,6 +18,7 @@ open class MainViewModel(private val repository: UserRepository) : ViewModel() {
     }
 
     fun loadUser() {
+        Log.d(TAG, "loadUser()")
         _user.postValue(repository.getUser())
     }
 
