@@ -2,11 +2,14 @@ package com.example.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.app.databinding.ActivityMainBinding
 import org.jetbrains.annotations.TestOnly
+
+private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
     private var viewModelFactory: ViewModelProvider.Factory? = null
@@ -29,6 +32,7 @@ class MainActivity : AppCompatActivity() {
          * Instead, we should call it in the ViewModel's init block.
          */
         // viewModel.loadUser()
+        Log.d(TAG, "onCreate()")
     }
 
     @TestOnly
